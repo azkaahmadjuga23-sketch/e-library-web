@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        border-radius: 0 !important;
+    }
+
+    body {
+        @apply bg-ink text-text font-sans antialiased;
+    }
+
+    ::selection {
+        @apply bg-text text-ink;
+    }
+
+    ::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-ink;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-border;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply bg-text text-ink px-6 py-3 text-sm font-medium tracking-widest uppercase transition-all duration-200 hover:bg-accent hover:text-ink;
+    }
+
+    .btn-ghost {
+        @apply border border-border text-text px-6 py-3 text-sm font-medium tracking-widest uppercase transition-all duration-200 hover:border-text;
+    }
+
+    .section-label {
+        @apply text-xs tracking-[0.3em] uppercase text-muted font-sans;
+    }
+
+    .card-book {
+        @apply border border-border bg-ink-soft transition-all duration-300 hover:border-text;
+    }
+}
